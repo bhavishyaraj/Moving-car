@@ -1,0 +1,169 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #b9dde3;
+}
+
+.car-structure {
+  height: 140px;
+  width: 500px;
+  color: rgb(33, 16, 144);
+  background-color: rgb(249, 63, 63);
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+
+.door {
+  position: absolute;
+  height: 10px;
+  width: 50px;
+  background-color: rgb(246, 251, 250);
+  top: 50%;
+  left: 50%;
+  border-radius: 15%;
+}
+
+.headlight {
+  position: absolute;
+  height: 30px;
+  width: 25px;
+  background-color: yellow;
+  top: 46.6%;
+  left: 66.6%;
+  border-radius: 80% 50% 10% 70%;
+  animation: light 0.5s infinite;
+}
+
+@keyframes light {
+  to {
+    opacity: 0.7;
+  }
+}
+
+.backlight {
+  position: absolute;
+  height: 30px;
+  width: 25px;
+  background-color: rgb(255, 0, 0);
+  top: 45%;
+  /* left: 80%; */
+  border-radius: 90% 30% 60% 30%;
+}
+
+.back-tyre,
+.front-tyre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid black;
+  animation: tyre 0.1s infinite;
+}
+
+@keyframes tyre {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.back-tyre {
+  top: 50%;
+  left: 37%;
+}
+
+.front-tyre {
+  top: 50%;
+  left: 57%;
+}
+
+.nut {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.car-window {
+  position: absolute;
+  height: 0px;
+  width: 250px;
+  bottom: 60%;
+  background-color: aqua;
+  border: 4px solid black;
+}
+
+.car-window-left {
+  position: absolute;
+  height: 69px;
+  width: 0px;
+  left: 41%;
+  bottom: 60%;
+  background-color: black;
+  border: 4px solid black;
+  transform: rotate(10deg);
+}
+
+.car-window-top {
+  position: absolute;
+  height: 0px;
+  width: 150px;
+  left: 41.5%;
+  bottom: 71%;
+  background-color: aqua;
+  border: 4px solid black;
+}
+
+.car-window-bottom {
+  position: absolute;
+  height: 65px;
+  width: 0px;
+  left: 48%;
+  bottom: 60%;
+  background-color: black;
+  border: 4px solid black;
+}
+
+.car-window-front {
+  position: absolute;
+  height: 68.5px;
+  width: 0px;
+  left: 55.8%;
+  bottom: 60%;
+  background-color: black;
+  border: 4px solid black;
+  transform: skew(51deg);
+}
+
+.cloud {
+  width: 100px;
+  height: 60px;
+  background-color: #0b818c;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  top: 10%;
+  animation: moveCloud 10s linear infinite;
+}
+
+@keyframes moveCloud {
+  to {
+    transform: translateX(150%);
+  }
+}
+
+.ground {
+  position: absolute;
+  height: 38%;
+  width: 100%;
+  background-color: rgb(21, 206, 21);
+  opacity: 0.8;
+  top: 62%;
+}
